@@ -1,0 +1,21 @@
+
+backend:
+  name: github
+  repo: eudyiekimanthi-alt/defrak-website
+  branch: main
+
+media_folder: "DEFRAK-Website-Customized/img/img"
+public_folder: "/img/img"
+
+collections:
+  - name: "projects"
+    label: "Our Projects"
+    folder: "DEFRAK-Website-Customized/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Project Date", name: "date", widget: "datetime" }
+      - { label: "Project Image", name: "image", widget: "image" }
+      - { label: "Video Link", name: "video", widget: "string", required: false }
+      - { label: "Description", name: "body", widget: "markdown" }
