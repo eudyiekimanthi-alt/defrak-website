@@ -1,7 +1,7 @@
 
 backend:
-  name: github
-  repo: eudyiekimanthi-alt/defrak-website
+  name: turbo-github
+  turbo_site_id: 76a7adc4-5745-44ac-92c7-88c1ac6ae313
   branch: main
 
 media_folder: "DEFRAK-Website-Customized/img/img"
@@ -19,3 +19,4 @@ collections:
       - { label: "Project Image", name: "image", widget: "image" }
       - { label: "Video Link", name: "video", widget: "string", required: false }
       - { label: "Description", name: "body", widget: "markdown" }
+
