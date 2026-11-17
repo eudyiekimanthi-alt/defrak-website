@@ -4,8 +4,8 @@ backend:
   turbo_site_id: 76a7adc4-5745-44ac-92c7-88c1ac6ae313
   branch: main
 
-media_folder: "DEFRAK-Website-Customized/img/img"
-public_folder: "/img/img"
+media_folder: "DEFRAK-Website-Customized/uploads/projects"
+public_folder: "/uploads/projects"
 
 collections:
   - name: "projects"
@@ -16,7 +16,14 @@ collections:
     fields:
       - { label: "Project Title", name: "title", widget: "string" }
       - { label: "Project Date", name: "date", widget: "datetime" }
-      - { label: "Project Image", name: "image", widget: "image" }
-      - { label: "Video Link", name: "video", widget: "string", required: false }
+      - label: "Project Photographs (Maximum 10)"
+        name: "images"
+        widget: "list"
+        min: 1
+        max: 10
+        field:
+          label: "Photograph"
+          name: "image"
+          widget: "image"
+      - { label: "YouTube Video Link", name: "video", widget: "string", required: false }
       - { label: "Description", name: "body", widget: "markdown" }
-
